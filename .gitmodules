@@ -1,9 +1,9 @@
 [submodule "emulator"]
 	path = emulator
-	url = ../machine-emulator.git
+	url = https://github.com/juztamau5/machine-emulator.git
 [submodule "rom"]
 	path = rom
-	url = ../machine-emulator-rom.git
+	url = https://github.com/juztamau5/machine-emulator-rom.git
 [submodule "tests"]
 	path = tests
 	url = ../machine-tests.git
@@ -12,10 +12,10 @@
 	url = ../image-rootfs.git
 [submodule "kernel"]
 	path = kernel
-	url = ../image-kernel.git
+	url = https://github.com/juztamau5/image-kernel.git
 [submodule "toolchain"]
 	path = toolchain
-	url = ../image-toolchain.git
+	url = https://github.com/juztamau5/image-toolchain.git
 [submodule "solidity-step"]
 	path = solidity-step
 	url = ../machine-solidity-step.git

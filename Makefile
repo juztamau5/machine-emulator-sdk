@@ -100,13 +100,13 @@ fs-env:
 	@docker run --hostname $@ -it --rm \
 		-v `pwd`:$(CONTAINER_BASE) \
 		-w $(CONTAINER_BASE) \
-		cartesi/image-rootfs:$(FS_TAG) $(CONTAINER_COMMAND)
+		juztamau5/image-rootfs:$(FS_TAG) $(CONTAINER_COMMAND)
 
 kernel-env:
 	@docker run --hostname $@ -it --rm \
 		-v `pwd`:$(CONTAINER_BASE) \
 		-w $(CONTAINER_BASE) \
-		cartesi/image-kernel:$(KERNEL_TAG) $(CONTAINER_COMMAND)
+		juztamau5/image-kernel:$(KERNEL_TAG) $(CONTAINER_COMMAND)
 
 toolchain-env:
 	docker run --hostname $@ -it --rm \
@@ -116,7 +116,7 @@ toolchain-env:
 		-e GID=$$(id -g) \
 		-v `pwd`:$(CONTAINER_BASE) \
 		-w $(CONTAINER_BASE) \
-		cartesi/toolchain:$(TOOLCHAIN_TAG) $(CONTAINER_COMMAND)
+		juztamau5/toolchain:$(TOOLCHAIN_TAG) $(CONTAINER_COMMAND)
 
 toolchain-exec:
 	docker run --hostname $@ --rm \
@@ -126,7 +126,7 @@ toolchain-exec:
 		-e GID=$$(id -g) \
 		-v `pwd`:$(CONTAINER_BASE) \
 		-w $(CONTAINER_BASE) \
-		cartesi/toolchain:$(TOOLCHAIN_TAG) $(CONTAINER_COMMAND)
+		juztamau5/toolchain:$(TOOLCHAIN_TAG) $(CONTAINER_COMMAND)
 
 fs kernel:
 	$(MAKE) -C $@ \
